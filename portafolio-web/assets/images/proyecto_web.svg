@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f5f5f5"/>
+  
+  <!-- Elementos que representan desarrollo web -->
+  <g transform="translate(150, 100) scale(0.9)">
+    <!-- Monitor/Navegador web -->
+    <rect x="-40" y="-35" width="80" height="55" rx="3" fill="#2c3e50"/>
+    <rect x="-36" y="-31" width="72" height="42" rx="1" fill="#ecf0f1"/>
+    
+    <!-- Barra de navegador -->
+    <rect x="-36" y="-31" width="72" height="8" fill="#bdc3c7"/>
+    <circle cx="-30" cy="-27" r="1.5" fill="#e74c3c"/>
+    <circle cx="-25" cy="-27" r="1.5" fill="#f1c40f"/>
+    <circle cx="-20" cy="-27" r="1.5" fill="#2ecc71"/>
+    
+    <!-- Contenido web -->
+    <rect x="-30" y="-18" width="20" height="3" fill="#3498db"/>
+    <rect x="-30" y="-13" width="60" height="2" fill="#7f8c8d"/>
+    <rect x="-30" y="-9" width="55" height="2" fill="#7f8c8d"/>
+    <rect x="-30" y="-5" width="40" height="2" fill="#7f8c8d"/>
+    <rect x="-30" y="-1" width="50" height="2" fill="#7f8c8d"/>
+    <rect x="0" y="-18" width="15" height="15" fill="#e74c3c"/>
+    
+    <!-- Base del monitor -->
+    <path d="M -10,20 L 10,20 L 5,35 L -5,35 Z" fill="#2c3e50"/>
+    <rect x="-18" y="35" width="36" height="3" rx="1" fill="#2c3e50"/>
+    
+    <!-- Elementos de código flotando -->
+    <g transform="translate(-50, -50)">
+      <text font-family="monospace" font-size="7" fill="#3498db">&lt;div&gt;</text>
+    </g>
+    <g transform="translate(35, -40)">
+      <text font-family="monospace" font-size="7" fill="#e74c3c">&lt;/html&gt;</text>
+    </g>
+    <g transform="translate(-40, 30)">
+      <text font-family="monospace" font-size="7" fill="#2ecc71">{CSS}</text>
+    </g>
+    <g transform="translate(40, 25)">
+      <text font-family="monospace" font-size="7" fill="#f39c12">const</text>
+    </g>
+  </g>
+  
+  <text x="150" y="160" font-size="28" text-anchor="middle" dominant-baseline="middle" font-family="serif" fill="#2c3e50" font-weight="bold">Proyecto Web</text>
+</svg>
