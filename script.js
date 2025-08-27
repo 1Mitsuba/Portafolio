@@ -8,6 +8,38 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.classList.toggle('active');
     });
 
+    // Manejar el envío del formulario de contacto
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevenir el envío normal del formulario
+            
+            // Obtener los valores del formulario
+            const nombre = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const asunto = document.getElementById('subject').value;
+            const mensaje = document.getElementById('message').value;
+            
+            // Crear el mensaje para WhatsApp
+            const mensajeWhatsApp = `¡Hola! Soy ${nombre}%0A%0A` +
+                                `*Email:* ${email}%0A` +
+                                `*Asunto:* ${asunto}%0A%0A` +
+                                `*Mensaje:*%0A${mensaje}`;
+            
+            // Número de WhatsApp (con código de país de Bolivia)
+            const numeroWhatsApp = '59169448014';
+            
+            // Crear el enlace de WhatsApp
+            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeWhatsApp}`;
+            
+            // Redireccionar a WhatsApp
+            window.open(urlWhatsApp, '_blank');
+            
+            // Limpiar el formulario
+            this.reset();
+        });
+    }
+
     // Cerrar menú al hacer clic en un enlace
     document.querySelectorAll('.nav-menu li a').forEach(n => n.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -40,15 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Manejar el envío del formulario
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Gracias por tu mensaje! Te contestaré lo antes posible.');
-            contactForm.reset();
-        });
-    }
 });
 
 // Función para cargar proyectos
